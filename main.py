@@ -7,8 +7,10 @@ Created on Fri Sep 28 10:26:54 2018
 
 import sys
 
-sys.path.append("../bavul")
+if not ('../bavul' in sys.path):
+    sys.path.append("../bavul")
 
-import bavul
+import bavul.tiles.tmx_read
 
-print(bavul.name)
+pl_1 = bavul.tiles.tmx_read.Plocica('tilesets/pokemon_test_1.tsx')
+ma_1 = bavul.tiles.tmx_read.Karta('maps/test_1.tmx')
